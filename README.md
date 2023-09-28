@@ -6,35 +6,35 @@ Single-cell RNA sequencing (scRNA-seq) has opened up new frontiers in genomics, 
 
 ## **Understanding STAR and CellRanger:**
 
-#### STAR (Spliced Transcripts Alignment to a Reference)
+**STAR (Spliced Transcripts Alignment to a Reference)**
 
 STAR is renowned for its efficiency in RNA-seq read alignment to a reference genome. While it's not designed exclusively for scRNA-seq, it can be a valuable tool in this context due to its speed and accuracy.
 
-#### CellRanger: A Comprehensive Toolkit
+**CellRanger: A Comprehensive Toolkit**
 
 CellRanger, developed by 10x Genomics, is tailor-made for scRNA-seq data analysis. It offers an end-to-end solution, simplifying the entire workflow from read alignment to downstream analysis.
 
 ## **Running STAR on HPC with SLURM:**
 
-#### Step 1: Check FastQ Quality Control (01_check_fastq_qc)
+**Step 1: Check FastQ Quality Control (01_check_fastq_qc)**
 
 Before launching STAR, ensure your input FastQ files are of high quality. You can perform this quality check using FastQC or similar tools. Create a SLURM script to submit the FastQC job to the cluster.
 
-#### Step 2: STAR Indexing (02_star_index)
+**Step 2: STAR Indexing (02_star_index)**
 
 To facilitate efficient alignment, STAR requires a pre-built index of the reference genome. Create a SLURM script to build the STAR index for your chosen reference genome. This step is typically performed only once unless you switch to a different genome.
 
-#### Step 3: Running STAR for Mapping (03_run_star)
+**Step 3: Running STAR for Mapping (03_run_star)**
 
 Create a SLURM script to execute the STAR alignment command, specifying input FastQ files, the reference genome index, and relevant parameters. After alignment, continue with quantification steps, such as generating gene expression matrices using tools like featureCounts or HTSeq.
 
 ## **Running CellRanger on HPC with SLURM:**
 
-#### Step 1: CellRanger Mkfastq (cellranger_mkfastq)
+**Step 1: CellRanger Mkfastq (cellranger_mkfastq)**
 
 CellRanger Mkfastq is used for demultiplexing raw sequencing data and generating FASTQ files for each sample. Create a SLURM script to submit the CellRanger Mkfastq job, specifying input BCL files and sample information.
 
-#### Step 2: CellRanger Count (cellranger_count)
+**Step 2: CellRanger Count (cellranger_count)**
 
 CellRanger Count is the heart of CellRanger, performing read alignment, barcode processing, and gene expression quantification in one go. Create a SLURM script to execute the CellRanger Count command, specifying input FASTQ files, the reference genome, and sample information. Customize options as needed for specific chemistry, transcriptome reference, and analysis parameters.
 
@@ -54,7 +54,7 @@ With this unified script, we provide an efficient and user-friendly solution for
 
 In the context of single-cell RNA sequencing (scRNA-seq) analysis, understanding the differences in FASTQ and reference files between STAR and CellRanger is crucial.
 
-### STAR Requirements
+**STAR Requirements**
 
 -   **Sample FASTQ Files**: STAR requires sample FASTQ files containing the sequencing reads.
 
@@ -64,7 +64,7 @@ In the context of single-cell RNA sequencing (scRNA-seq) analysis, understanding
 
 STAR aligns sequencing reads to the reference genome and annotation, enabling the mapping of reads to specific genes and transcripts.
 
-### CellRanger Requirements (developed by 10x Genomics)
+**CellRanger Requirements (developed by 10x Genomics)**
 
 -   **Sample FASTQ Files**: Similar to STAR, CellRanger requires sample FASTQ files containing the sequencing reads.
 
