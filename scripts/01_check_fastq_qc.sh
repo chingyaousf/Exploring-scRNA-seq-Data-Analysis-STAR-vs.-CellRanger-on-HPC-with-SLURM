@@ -4,7 +4,7 @@
 #SBATCH --time=02:00:00
 #SBATCH --mem=10000
 #SBATCH --nodes=2
-#SBATCH --mail-user=chingyao@usf.edu
+#SBATCH --mail-user=
 #SBATCH --job-name=FASTQC
 #SBATCH --output=fastqc.out
 #SBATCH --partition=rra --qos=rra
