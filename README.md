@@ -70,7 +70,7 @@ STAR aligns sequencing reads to the reference genome and annotation, enabling th
 
 -   **Transcriptome Reference Package**: Instead of a full genome reference, CellRanger uses a pre-built transcriptome reference package. This package includes both a reference FASTA file (usually a transcriptome) and an associated GTF file (or equivalent) containing transcript annotations.
 
-In contrast to STAR, CellRanger does not align reads to the full genome; it aligns them to a pre-built transcriptome. This transcriptome reference package includes a FASTA file with transcript sequences and a GTF file with annotations specific to the experiment or dataset. This approach is suitable for scRNA-seq data analysis because it focuses on quantifying gene and transcript expression rather than aligning reads to the entire genome.
+In contrast to STAR, **CellRanger does not align reads to the full genome**; it aligns them to a pre-built transcriptome. This transcriptome reference package includes a FASTA file with transcript sequences and a GTF file with annotations specific to the experiment or dataset. This approach is suitable for scRNA-seq data analysis because it **focuses on quantifying gene and transcript expression** rather than aligning reads to the entire genome.
 
 In summary, both STAR and CellRanger perform read alignment and quantification, but CellRanger simplifies the process for single-cell RNA-seq by using a pre-built transcriptome reference that includes transcript annotations, while STAR requires a separate genome reference and annotation file.
 
