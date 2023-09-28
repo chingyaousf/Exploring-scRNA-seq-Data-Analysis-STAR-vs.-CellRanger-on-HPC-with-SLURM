@@ -4,7 +4,7 @@
 #SBATCH --time=02:00:00
 #SBATCH --mem=50000
 #SBATCH --nodes=3
-#SBATCH --mail-user=chingyao@usf.edu
+#SBATCH --mail-user=youremail
 #SBATCH --job-name=03_run_star
 #SBATCH --output=03_run_star.out
 #SBATCH --partition=rra --qos=rra
