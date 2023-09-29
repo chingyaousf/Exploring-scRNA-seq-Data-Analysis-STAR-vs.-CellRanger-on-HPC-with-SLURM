@@ -1,4 +1,4 @@
-# Exploring scRNA-seq Data Analysis: STAR vs. CellRanger on HPC with SLURM
+# Exploring scRNA-seq Data Analysis: STAR vs. CellRanger on HPC with Streamlined SLURM Pipelines
 
 ## **Overview:**
 
@@ -118,4 +118,6 @@ In summary, both STAR and CellRanger offer powerful solutions for scRNA-seq data
 
 <https://cf.10xgenomics.com/supp/cell-exp/refdata-gex-GRCh38-2020-A.tar.gz>
 
-## **Input & output data available in the data folder**
+## Some output in the data folder:
+
+<https://github.com/chingyaousf/Exploring-scRNA-seq-Data-Analysis-STAR-vs.-CellRanger-on-HPC-with-SLURM/tree/main/data>
