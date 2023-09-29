@@ -7,7 +7,7 @@
 #SBATCH --time=12:00:00
 #SBATCH -o run.out
 #SBATCH -e run.err
-#SBATCH --mail-user=chingyao@usf.edu
+#SBATCH --mail-user=yourmail
 #SBATCH --job-name=cellranger_mkfastq_count_job
 #SBATCH --output=cellranger_mkfastq_count_job.out
 #SBATCH --partition=rra --qos=rra
